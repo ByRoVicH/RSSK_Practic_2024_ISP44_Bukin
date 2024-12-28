@@ -1,0 +1,23 @@
+﻿<Window x:Class="PressureChartApp.MainWindow" ResizeMode="CanMinimize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Background="FloralWhite"
+        Title="График давления в Туле" Height="415" Width="650">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="515*"/>
+            <ColumnDefinition Width="77*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="PressureCanvas" Background="DarkGray" Margin="14,25,0,0" Height="328" VerticalAlignment="Top" HorizontalAlignment="Left" Width="475" Grid.Column="1" />
+        <TextBlock Text="мм рт. ст." Height="25" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="7,2,505,0"/>
+
+        <TextBlock x:Name="CurrentPressureText" Margin="15,353,0,0" FontSize="14" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="228" Grid.Column="1" />
+        <TextBlock x:Name="AveragePressureText" Margin="261,353,0,0" FontSize="14" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="226" Grid.Column="1" />
+
+        <Button x:Name="StartPauseButton" Background="DarkGray" Content="Стоп" Width="75" Height="30" Margin="520,246,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="StartPauseButton_Click" Grid.Column="1" Grid.ColumnSpan="2" />
+        <TextBlock Text="tps" Height="45" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="500,329,63,0" Grid.Column="1"/>
+        <Button x:Name="ExitButton" Background="DarkGray" Content="Выход" Width="75" Height="30" Margin="520,294,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Click="ExitButton_Click" />
+        <Button x:Name="InfoButton" Background="DarkGray" Content="О программе" Width="75" Height="30" Margin="520,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Click="InfoButton_Click" />
+    </Grid>
+</Window>
